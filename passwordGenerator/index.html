@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+
+    <style>
+        .passwordGenerator {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+
+        button {
+            padding: 20px;
+            font-size: large;
+            background-color: red;
+        }
+        .checkboxSelector {
+            display: flex;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="passwordGenerator" id="passwordGenerator">
+        <div class="checkboxSelector">
+            <input type = 'checkbox' id = 'uppercase' name = 'uppercase checkbox'>
+            <label for="uppercase">Uppercase</label>
+            <input type = 'checkbox' id = 'lowercase' name = 'lowercase checkbox'>
+            <label for="lowercase">lowercase</label>
+            <input type = 'checkbox' id = 'number' name = 'number checkbox'>
+            <label for="number">Number</label>
+            <input type = 'checkbox' id = 'Symbols' name = 'Symbols checkbox'>
+            <label for="Symbols">Symbols</label>
+        </div>
+        <button>Generate Password</button>
+        <p id = 'generatedPassword'></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
