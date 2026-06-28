@@ -10,11 +10,15 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     return arr.join('');
 }
+let inputLen = document.getElementById('pass-len');
     button.addEventListener('click', ()=>{
         const checkboxes = document.querySelectorAll('input[type = "checkbox"]')
         let pass = "";
-        const len = 0;
-        const length-input = document.querySelector('')
+        let len = Number(inputLen.value);
+        if (![...checkboxes].some(cb => cb.checked)) {
+            alert("Please select at least one character type...");
+            return ;
+        }
         while(pass.length < len){
         if (checkboxes[0].checked)
         pass = pass + String.fromCharCode(Math.floor(Math.random() * 26) + 65);
@@ -26,7 +30,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         if (checkboxes[3].checked)
         pass  = pass + symbols[Math.floor(Math.random() * symbols.length)];
         }
-        pass = shuffleString(pass);
+        pass = shuffleString(pass).slice(0, len);
         alert("your password is " + pass);
     })
 })
