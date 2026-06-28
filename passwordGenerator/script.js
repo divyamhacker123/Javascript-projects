@@ -13,8 +13,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
     button.addEventListener('click', ()=>{
         const checkboxes = document.querySelectorAll('input[type = "checkbox"]')
         let pass = "";
-        const len = Math.floor(Math.random() * 3);
-        for (let i = 0; i <= len; i ++){
+        const len = 0;
+        const length-input = document.querySelector('')
+        while(pass.length < len){
         if (checkboxes[0].checked)
         pass = pass + String.fromCharCode(Math.floor(Math.random() * 26) + 65);
         if (checkboxes[1].checked)
