@@ -31,6 +31,11 @@ let inputLen = document.getElementById('pass-len');
         pass  = pass + symbols[Math.floor(Math.random() * symbols.length)];
         }
         pass = shuffleString(pass).slice(0, len);
-        alert("your password is " + pass);
+        let passP = document.getElementById('generatedPassword');
+        passP.innerHTML = `your generated password is ${pass}`
+        passP.style.border = "2px solid black";
+        passP.style.width = "400px";
+        passP.style.padding = "10px";
+        passP.style.fontSize = "18px";
     })
 })
