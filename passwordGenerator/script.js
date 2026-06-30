@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     return arr.join('');
 }
+localStorage.setItem('theme', 'light');
 let inputLen = document.getElementById('pass-len');
     button.addEventListener('click', ()=>{
         const checkboxes = document.querySelectorAll('input[type = "checkbox"]')
